@@ -1,0 +1,23 @@
+{
+  "name": "Tt Light",
+  "background": "#FAFAF8",
+  "foreground": "#24262B",
+  "cursorColor": "#002FA7",
+  "selectionBackground": "#E2ECFF",
+  "black": "#181A1F",
+  "red": "#CA1243",
+  "green": "#348133",
+  "yellow": "#986801",
+  "blue": "#265CE0",
+  "purple": "#A626A4",
+  "cyan": "#0177AB",
+  "white": "#4B5263",
+  "brightBlack": "#696C77",
+  "brightRed": "#E45649",
+  "brightGreen": "#50A14F",
+  "brightYellow": "#C18401",
+  "brightBlue": "#4078F2",
+  "brightPurple": "#C03DC2",
+  "brightCyan": "#0184BC",
+  "brightWhite": "#383A42"
+}
