@@ -1,0 +1,23 @@
+{
+  "name": "Tt Dark",
+  "background": "#141413",
+  "foreground": "#E8E6E1",
+  "cursorColor": "#5B7BFF",
+  "selectionBackground": "#223052",
+  "black": "#73716A",
+  "red": "#F2747D",
+  "green": "#98C379",
+  "yellow": "#E0AB56",
+  "blue": "#61AFEF",
+  "purple": "#CF82E6",
+  "cyan": "#56B6C2",
+  "white": "#D5D2CA",
+  "brightBlack": "#ABA8A0",
+  "brightRed": "#FF9399",
+  "brightGreen": "#B5DE8A",
+  "brightYellow": "#F5CF6B",
+  "brightBlue": "#96B0FF",
+  "brightPurple": "#E394FB",
+  "brightCyan": "#7AD8E4",
+  "brightWhite": "#FAFAF8"
+}
