@@ -2,6 +2,46 @@
 
 Day/night twin color schemes for Windows Terminal synthesizing **Atom One (Light & Dark)** syntax hues with the **Guizang Design System** ([op7418/dsh-guizang-design](https://github.com/op7418/dsh-guizang-design)) — Swiss International neutrals (`#FAFAF8` / `#141413`), Klein Blue anchors (`#002FA7` / `#5B7BFF`), `midnight-ink` warm gold accents (`#E0AB56`), and OKLCH + APCA/WCAG dual-threshold calibration.
 
+## Quick Install (One-Liner)
+
+Works out-of-the-box on a fresh Windows Terminal setup (PowerShell 5.1 & PowerShell 7+). Automatically detects Store, Preview, and Unpackaged `settings.json`, strips JSONC comments safely, creates a timestamped `.bak` backup, installs both `Tt Light` and `Tt Dark`, and enables `"adjustIndistinguishableColors": "indexed"`.
+
+**1. Auto Day/Night Switching (Recommended — follows Windows light/dark mode):**
+
+```powershell
+irm https://raw.githubusercontent.com/TomXPRIME/tt-theme/main/install.ps1 | iex
+```
+
+**2. Always Dark (`Tt Dark`):**
+
+```powershell
+& ([scriptblock]::Create((irm https://raw.githubusercontent.com/TomXPRIME/tt-theme/main/install.ps1))) -Mode dark
+```
+
+**3. Always Light (`Tt Light`):**
+
+```powershell
+& ([scriptblock]::Create((irm https://raw.githubusercontent.com/TomXPRIME/tt-theme/main/install.ps1))) -Mode light
+```
+
+**4. Interactive Choice Menu (`auto` / `light` / `dark`):**
+
+```powershell
+& ([scriptblock]::Create((irm https://raw.githubusercontent.com/TomXPRIME/tt-theme/main/install.ps1))) -Mode ask
+```
+
+### Installer Flags
+
+| Flag / Option | Description |
+|---|---|
+| `-Mode auto\|light\|dark\|ask` | Choose automatic OS switching (default), fixed light, fixed dark, or interactive prompt (also supports `$env:TT_THEME_MODE`) |
+| `-KeepWindowTheme` | Leave top-level `"theme"` untouched instead of setting `"system"` / `"light"` / `"dark"` |
+| `-OverrideProfiles` | Remove per-profile `"colorScheme"` overrides in `profiles.list` so all shells inherit the global Tt Theme |
+| `-NoBackup` | Skip creating `settings.json.bak.YYYYMMDD-HHMMSS` |
+| `-SettingsPath <path>` | Target a specific `settings.json` path explicitly |
+
+---
+
 ## Twin Philosophy & Anti-Invisibility Design
 
 | Feature | `Tt Light` (Day) | `Tt Dark` (Night) |
@@ -56,7 +96,7 @@ Day/night twin color schemes for Windows Terminal synthesizing **Atom One (Light
 
 ---
 
-## Install & Auto Day/Night Switching
+## Manual Install
 
 1. Open Windows Terminal `settings.json` (`Ctrl+Shift+,`, or `%LOCALAPPDATA%\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json`).
 2. Add both [`tt-light.json`](tt-light.json) and [`tt-dark.json`](tt-dark.json) to your `"schemes"` array.
